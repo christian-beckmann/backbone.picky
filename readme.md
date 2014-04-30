@@ -397,6 +397,8 @@ Deselect all models in the collection.
 myCol = new MultiCollection();
 
 myCol.deselectAll();
+//or
+myCol.selectNone();
 ```
 
 Models that are selected will be deselected. 
