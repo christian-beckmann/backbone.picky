@@ -100,6 +100,11 @@
         .cstat-no { background: #fc8c84; color: #111; }
         .fstat-no { background: #ffc520; color: #111 !important; }
         .cbranch-no { background:  yellow !important; color: #111; }
+
+        .cstat-skip { background: #ddd; color: #111; }
+        .fstat-skip { background: #ddd; color: #111 !important; }
+        .cbranch-skip { background: #ddd !important; color: #111; }
+
         .missing-if-branch {
             display: inline-block;
             margin-right: 10px;
@@ -107,9 +112,18 @@
             padding: 0 4px;
             background: black;
             color: yellow;
-            xtext-decoration: line-through;
         }
-        .missing-if-branch .typ {
+
+        .skip-if-branch {
+            display: none;
+            margin-right: 10px;
+            position: relative;
+            padding: 0 4px;
+            background: #ccc;
+            color: white;
+        }
+
+        .missing-if-branch .typ, .skip-if-branch .typ {
             color: inherit !important;
         }
 
@@ -176,6 +190,8 @@
             margin: 0 !important;
         }
         .com { color: #999 !important; }
+        .ignore-none { color: #999; font-weight: normal; }
+
     </style>
 </head>
 <body>
@@ -183,19 +199,20 @@
     <h1>Code coverage report for <span class="entity">src/backbone.picky.js</span></h1>
     <h2>
         
-        Statements: <span class="metric">94.74% <small>(72 / 76)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Statements: <span class="metric">93.1% <small>(81 / 87)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Branches: <span class="metric">88.89% <small>(32 / 36)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">88.89% <small>(40 / 45)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Functions: <span class="metric">94.12% <small>(16 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">90% <small>(18 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
         
-        Lines: <span class="metric">95.45% <small>(63 / 66)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">93.1% <small>(81 / 87)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
         
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">src/</a> &#187; backbone.picky.js</div>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">src\</a> &#187; backbone.picky.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
@@ -380,7 +397,66 @@
 179
 180
 181
-182</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-yes">1</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -400,6 +476,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">41</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">27</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -412,63 +490,85 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">41</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">17</span>
-<span class="cline-any cline-yes">17</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-yes">12</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">67</span>
-<span class="cline-any cline-yes">67</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">128</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">108</span>
-<span class="cline-any cline-yes">108</span>
-<span class="cline-any cline-yes">108</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">43</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">35</span>
-<span class="cline-any cline-yes">35</span>
-<span class="cline-any cline-yes">35</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">36</span>
-<span class="cline-any cline-yes">18</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12</span>
 <span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">17</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">73</span>
+<span class="cline-any cline-yes">73</span>
+<span class="cline-any cline-yes">73</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">137</span>
+<span class="cline-any cline-yes">135</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">115</span>
+<span class="cline-any cline-yes">115</span>
+<span class="cline-any cline-yes">115</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-yes">10</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-yes">42</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">30</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -488,8 +588,34 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">172</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">184</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
@@ -497,26 +623,30 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">260</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">141</span>
-<span class="cline-any cline-yes">141</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">141</span>
-<span class="cline-any cline-yes">135</span>
+<span class="cline-any cline-yes">276</span>
+<span class="cline-any cline-yes">126</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150</span>
+<span class="cline-any cline-yes">150</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">150</span>
+<span class="cline-any cline-yes">144</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">92</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">100</span>
+<span class="cline-any cline-yes">55</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-yes">45</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45</span>
 <span class="cline-any cline-yes">43</span>
-<span class="cline-any cline-yes">43</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">43</span>
-<span class="cline-any cline-yes">41</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -538,216 +668,271 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-yes">173</span>
+<span class="cline-any cline-yes">186</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">173</span>
-<span class="cline-any cline-yes">173</span>
+<span class="cline-any cline-yes">186</span>
+<span class="cline-any cline-yes">186</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">173</span>
-<span class="cline-any cline-yes">69</span>
-<span class="cline-any cline-yes">69</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">104</span>
-<span class="cline-any cline-yes">33</span>
-<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">186</span>
+<span class="cline-any cline-yes">75</span>
+<span class="cline-any cline-yes">75</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">71</span>
-<span class="cline-any cline-yes">71</span>
-<span class="cline-any cline-yes">71</span>
+<span class="cline-any cline-yes">111</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-yes">36</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">75</span>
+<span class="cline-any cline-yes">75</span>
+<span class="cline-any cline-yes">75</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">Backbone.Picky = (function (Backbone, _) {
-  var Picky = {};
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// merged pull request - maxSelectable: https://github.com/derickbailey/backbone.picky/pull/28/files
+// custom methods: getSelected, setMaxSelected
 &nbsp;
-  // Picky.SingleSelect
-  // ------------------
-  // A single-select mixin for Backbone.Collection, allowing a single
-  // model to be selected within a collection. Selection of another
-  // model within the collection causes the previous model to be
-  // deselected.
+Backbone.Picky = (function (Backbone, _) {
+    var Picky = {};
 &nbsp;
-  Picky.SingleSelect = function(collection){
-    this.collection = collection;
-  };
+    // Picky.SingleSelect
+    // ------------------
+    // A single-select mixin for Backbone.Collection, allowing a single
+    // model to be selected within a collection. Selection of another
+    // model within the collection causes the previous model to be
+    // deselected.
 &nbsp;
-  _.extend(Picky.SingleSelect.prototype, {
+    Picky.SingleSelect = function (collection) {
+        this.collection = collection;
+    };
 &nbsp;
-    // Select a model, deselecting any previously
-    // selected model
-    select: function(model){
-      if (model &amp;&amp; this.selected === model) { return; }
+    _.extend(Picky.SingleSelect.prototype, {
 &nbsp;
-      this.deselect();
+        // Select a model, deselecting any previously
+        // selected model
+        select: function (model) {
+            if (model &amp;&amp; this.selected === model) {
+                return;
+            }
 &nbsp;
-      this.selected = model;
-      this.selected.select();
-      this.trigger("select:one", model);
-    },
+            this.deselect();
 &nbsp;
-    // Deselect a model, resulting in no model
-    // being selected
-    deselect: function(model){
-      if (!this.selected){ return; }
+            this.selected = model;
+            this.selected.select();
+            this.trigger("select:one", model);
+        },
 &nbsp;
-      model = model || this.selected;
-      if (this.selected !== model){ return; }
+        // Deselect a model, resulting in no model
+        // being selected
+        deselect: function (model) {
+            if (!this.selected) {
+                return;
+            }
 &nbsp;
-      this.selected.deselect();
-      this.trigger("deselect:one", this.selected);
-      delete this.selected;
-    }
+            model = model || this.selected;
+            if (this.selected !== model) {
+                return;
+            }
 &nbsp;
-  });
+            this.selected.deselect();
+            this.trigger("deselect:one", this.selected);
+            delete this.selected;
+        }
 &nbsp;
-  // Picky.MultiSelect
-  // -----------------
-  // A mult-select mixin for Backbone.Collection, allowing a collection to
-  // have multiple items selected, including `selectAll` and `selectNone`
-  // capabilities.
+    });
 &nbsp;
-  Picky.MultiSelect = function (collection) {
-    this.collection = collection;
-    this.selected = {};
-  };
+    // Picky.MultiSelect
+    // -----------------
+    // A mult-select mixin for Backbone.Collection, allowing a collection to
+    // have multiple items selected, including `selectAll` and `selectNone`
+    // capabilities.
 &nbsp;
-  _.extend(Picky.MultiSelect.prototype, {
+    Picky.MultiSelect = function (collection, maxSelectable) {
+        this.collection = collection;
+        this.selected = {};
+        this.maxSelectable = maxSelectable;
+    };
 &nbsp;
-    // Select a specified model, make sure the
-    // model knows it's selected, and hold on to
-    // the selected model.
-    select: function (model) {
-      if (this.selected[model.cid]) { return; }
+    _.extend(Picky.MultiSelect.prototype, {
 &nbsp;
-      this.selected[model.cid] = model;
-      model.select();
-      calculateSelectedLength(this);
-    },
+        // Select a specified model, make sure the
+        // model knows it's selected, and hold on to
+        // the selected model.
+        select: function (model) {
+            if (typeof this.maxSelectable === "undefined" || this.maxSelectable &lt; 0 || this.maxSelectable &gt; _.size(this.selected)) {
+                if (this.selected[model.cid]) {
+                    return;
+                }
+                this.selected[model.cid] = model;
+                model.select();
+                calculateSelectedLength(this);
+            } else {
+                model.deselect();
+            }
+        },
 &nbsp;
-    // Deselect a specified model, make sure the
-    // model knows it has been deselected, and remove
-    // the model from the selected list.
-    deselect: function (model) {
-      if (!this.selected[model.cid]) { return; }
+        // Deselect a specified model, make sure the
+        // model knows it has been deselected, and remove
+        // the model from the selected list.
+        deselect: function (model) {
+            if (!this.selected[model.cid]) {
+                return;
+            }
 &nbsp;
-      delete this.selected[model.cid];
-      model.deselect();
-      calculateSelectedLength(this);
-    },
+            delete this.selected[model.cid];
+            model.deselect();
+            calculateSelectedLength(this);
+        },
 &nbsp;
-    // Select all models in this collection
-    selectAll: function () {
-      this.each(function (model) { model.select(); });
-      calculateSelectedLength(this);
-    },
+        // Select all models in this collection
+        selectAll: function () {
+            this.each(function (model) {
+                model.select();
+            });
+            calculateSelectedLength(this);
+        },
 &nbsp;
-    // Deselect all models in this collection
-    selectNone: function () {
-      <span class="missing-if-branch" title="if path not taken"" >I</span>if (this.selectedLength === 0) { <span class="cstat-no" title="statement not covered" >return; </span>}
-      this.each(function (model) { model.deselect(); });
-      calculateSelectedLength(this);
-    },
+        deselectAll: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            this.selectNone();</span>
+        },
 &nbsp;
-    // Toggle select all / none. If some are selected, it
-    // will select all. If all are selected, it will select 
-    // none. If none are selected, it will select all.
-    toggleSelectAll: function () {
-      if (this.selectedLength === this.length) {
-        this.selectNone();
-      } else {
-        this.selectAll();
-      }
-    }
-  });
+        // Deselect all models in this collection
+        selectNone: function () {
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (this.selectedLength === 0) {
+<span class="cstat-no" title="statement not covered" >                return;</span>
+            }
+            this.each(function (model) {
+                model.deselect();
+            });
+            calculateSelectedLength(this);
+        },
 &nbsp;
-  // Picky.Selectable
-  // ----------------
-  // A selectable mixin for Backbone.Model, allowing a model to be selected,
-  // enabling it to work with Picky.MultiSelect or on it's own
+        // Toggle select all / none. If some are selected, it
+        // will select all. If all are selected, it will select
+        // none. If none are selected, it will select all.
+        toggleSelectAll: function () {
+            if (this.selectedLength === this.length) {
+                this.selectNone();
+            } else {
+                this.selectAll();
+            }
+        },
 &nbsp;
-  Picky.Selectable = function (model) {
-    this.model = model;
-  };
+        /**
+         * Change the maximum selectable Models,
+         * TODO: if collection has more selected then the new max value, nothing happens
+         * Infinite: set lower than 0 (-1 resets the border)
+         * @param maxSelectable {int}
+         * @returns {Backbone.Picky.MultiSelect}
+         */
+        setMaxSelectable: function (maxSelectable) {
+            if (isNaN(maxSelectable)) {
+                maxSelectable = -1;
+            }
+            this.maxSelectable = maxSelectable;
+            return this;
+        },
 &nbsp;
-  _.extend(Picky.Selectable.prototype, {
+        /**
+         * Returns an array of all selected Models in Collection
+         * @returns {Array}
+         */
+        getSelected: function () {
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (this.selectedLength === 0) {
+<span class="cstat-no" title="statement not covered" >                return [];</span>
+            }
+            return _.where(this.selected, {selected: true});
+        }
+    });
 &nbsp;
-    // Select this model, and tell our
-    // collection that we're selected
-    select: function () {
-      if (this.selected) { return; }
+    // Picky.Selectable
+    // ----------------
+    // A selectable mixin for Backbone.Model, allowing a model to be selected,
+    // enabling it to work with Picky.MultiSelect or on it's own
 &nbsp;
-      this.selected = true;
-      this.trigger("selected", this);
+    Picky.Selectable = function (model) {
+        this.model = model;
+    };
 &nbsp;
-      if (this.collection) {
-        this.collection.select(this);
-      }
-    },
+    _.extend(Picky.Selectable.prototype, {
 &nbsp;
-    // Deselect this model, and tell our
-    // collection that we're deselected
-    deselect: function () {
-      if (!this.selected) { return; }
+        // Select this model, and tell our
+        // collection that we're selected
+        select: function () {
+            if (this.selected) {
+                return;
+            }
 &nbsp;
-      this.selected = false;
-      this.trigger("deselected", this);
+            this.selected = true;
+            this.trigger("selected", this);
 &nbsp;
-      if (this.collection) {
-        this.collection.deselect(this);
-      }
-    },
+            if (this.collection) {
+                this.collection.select(this);
+            }
+        },
 &nbsp;
-    // Change selected to the opposite of what
-    // it currently is
-    toggleSelected: <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >      if (this.selected) {</span>
-<span class="cstat-no" title="statement not covered" >        this.deselect();</span>
-      } else {
-<span class="cstat-no" title="statement not covered" >        this.select();</span>
-      }
-    }
-  });
+        // Deselect this model, and tell our
+        // collection that we're deselected
+        deselect: function () {
+            if (!this.selected) {
+                return;
+            }
 &nbsp;
-  // Helper Methods
-  // --------------
+            this.selected = false;
+            this.trigger("deselected", this);
 &nbsp;
-  // Calculate the number of selected items in a collection
-  // and update the collection with that length. Trigger events
-  // from the collection based on the number of selected items.
-  var calculateSelectedLength = function (collection) {
-    collection.selectedLength = _.size(collection.selected);
+            if (this.collection) {
+                this.collection.deselect(this);
+            }
+        },
 &nbsp;
-    var selectedLength = collection.selectedLength;
-    var length = collection.length;
+        // Change selected to the opposite of what
+        // it currently is
+        toggleSelected: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            if (this.selected) {</span>
+<span class="cstat-no" title="statement not covered" >                this.deselect();</span>
+            } else {
+<span class="cstat-no" title="statement not covered" >                this.select();</span>
+            }
+        }
+    });
 &nbsp;
-    if (selectedLength === length) {
-      collection.trigger("select:all", collection);
-      return;
-    }
+    // Helper Methods
+    // --------------
 &nbsp;
-    if (selectedLength === 0) {
-      collection.trigger("select:none", collection);
-      return;
-    }
+    // Calculate the number of selected items in a collection
+    // and update the collection with that length. Trigger events
+    // from the collection based on the number of selected items.
+    var calculateSelectedLength = function (collection) {
+        collection.selectedLength = _.size(collection.selected);
 &nbsp;
-    <span class="missing-if-branch" title="else path not taken"" >E</span>if (selectedLength &gt; 0 &amp;&amp; selectedLength &lt; length) {
-      collection.trigger("select:some", collection);
-      return;
-    }
-  };
+        var selectedLength = collection.selectedLength;
+        var length = collection.length;
 &nbsp;
-  return Picky;
-})(Backbone, _);
-&nbsp;</pre></td></tr>
+        if (selectedLength === length) {
+            collection.trigger("select:all", collection);
+            return;
+        }
+&nbsp;
+        if (selectedLength === 0) {
+            collection.trigger("select:none", collection);
+            return;
+        }
+&nbsp;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (selectedLength &gt; 0 &amp;&amp; selectedLength &lt; length) {
+            collection.trigger("select:some", collection);
+            return;
+        }
+    };
+&nbsp;
+    return Picky;
+})(Backbone, _);</pre></td></tr>
 </table></pre>
 
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jul 26 2013 11:50:30 GMT-0500 (CDT)</div>
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 30 2014 19:56:32 GMT+0200 (Mitteleuropäische Sommerzeit)</div>
 </div>
 
 <script src="../prettify.js"></script>
