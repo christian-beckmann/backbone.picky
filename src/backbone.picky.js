@@ -1,5 +1,6 @@
+// @modified version: https://github.com/christian-beckmann/backbone.picky
 // merged pull request - maxSelectable: https://github.com/derickbailey/backbone.picky/pull/28/files
-// custom methods: getSelected, setMaxSelected
+// custom methods: getSelected, getDeselect, setMaxSelected
 
 Backbone.Picky = (function (Backbone, _) {
     var Picky = {};
