@@ -418,6 +418,11 @@ myCol.toggleSelectAll(); // select all models in the collection
 myCol.toggleSelectAll(); // de-select all models in the collection
 ```
 
+### MultiSelect#setMaxSelectable
+Sets a limit of selectable models. If the value is lower than 0, i.e. -1 no limit is set.
+If models already selected and the limit is lower then those, it won't do anything to the
+existing selected models, it only checks afterwards.
+
 ### MultiSelect#getSelected
 Returns an array of all selected models in the collection
 
