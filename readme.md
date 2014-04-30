@@ -420,11 +420,9 @@ myCol.toggleSelectAll(); // de-select all models in the collection
 
 ### MultiSelect#getSelected
 Returns an array of all selected models in the collection
-```
 
 ### MultiSelect#getDeselected
 Returns an array of all not selected models in the collection
-```
 
 The following rules are used when toggling:
 
