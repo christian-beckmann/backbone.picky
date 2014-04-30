@@ -58,7 +58,7 @@ Backbone.Picky = (function (Backbone, _) {
 
     Picky.MultiSelect = function (collection, maxSelectable) {
         this.collection = collection;
-        this.selected = {};
+        this.selected = {}; //Caching selected Models reference
         this.maxSelectable = maxSelectable;
     };
 
@@ -151,6 +151,20 @@ Backbone.Picky = (function (Backbone, _) {
                 return [];
             }
             return _.where(this.selected, {selected: true});
+        },
+
+        /**
+         * Returns an array of all not selected Models in Collection
+         * @returns {Array}
+         */
+        getDeselected: function () {
+            var arr = [];
+            this.each(function (model) {
+                if (!model.selected) {
+                    arr.push(model);
+                }
+            });
+            return arr;
         }
     });
 
@@ -215,8 +229,8 @@ Backbone.Picky = (function (Backbone, _) {
     var calculateSelectedLength = function (collection) {
         collection.selectedLength = _.size(collection.selected);
 
-        var selectedLength = collection.selectedLength;
-        var length = collection.length;
+        var selectedLength = collection.selectedLength,
+            length = collection.length;
 
         if (selectedLength === length) {
             collection.trigger("select:all", collection);
